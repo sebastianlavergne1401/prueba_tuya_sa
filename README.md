@@ -19,6 +19,7 @@ prueba_tuya_sa/
 ├── ejercicio_3_sql/           # Scripts SQL y archivo de rachas
 │   ├── load_data.py
 │   ├── Prueba Tecnica.xlsx
+│   ├── punto_3_solucion.db
 │   ├── query.sql
 │   └── schema.sql
 │
@@ -31,8 +32,8 @@ prueba_tuya_sa/
 ## 1. Ejercicio Conceptual de Creación de Dataset de Números de Teléfono de Clientes
 
 ### Comandos importantes:
-- Para ejecutar el código: ```python ejercicio_1_y_2/src/main.py```
-- Para ejecutar los tests: ```python -m pytest ejercicio_1_y_2/tests/test_validation.py```
+- Para ejecutar el código: ```python ejercicio_1/src/main.py```
+- Para ejecutar los tests: ```python -m pytest ejercicio_1/tests/test_validation.py```
 
 
 
