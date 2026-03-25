@@ -25,14 +25,9 @@ jobs:
       with:
         python-version: '3.9'
 
-    - name: Instalar dependencias
+    - name: Ejecutar Pruebas Unitarias
       run: |
-        python -m pip install --upgrade pip
-        pip install pytest
-
-    - name: Ejecutar Pruebas Unitarias (Pytest)
-      run: |
-        python -m pytest tests/test_validation.py
+        python -m unittest tests/test_validation.py
 
     - name: Ejecutar Proceso ETL
       # Este paso verificará que el script genere la carpeta 'processed' y el CSV final

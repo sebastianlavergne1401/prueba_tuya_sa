@@ -1,28 +1,26 @@
 -- Querys de validación
 -- Control de duplicados en historia
-SELECT
-    identificacion,
-    corte_mes,
-    COUNT(*)    AS num_registros,
-    MIN(saldo)  AS saldo_min,
-    MAX(saldo)  AS saldo_max
-FROM historia
-GROUP BY identificacion, corte_mes
-HAVING COUNT(*) > 1;
+--SELECT
+--    identificacion,
+--    corte_mes,
+--    COUNT(*)    AS num_registros,
+--    MIN(saldo)  AS saldo_min,
+--    MAX(saldo)  AS saldo_max
+--FROM historia
+--GROUP BY identificacion, corte_mes
+--HAVING COUNT(*) > 1;
 
--- Clientes con registros en historia DESPUÉS de su fecha de retiro
-SELECT h.identificacion, h.corte_mes, r.fecha_retiro
-FROM historia h
-INNER JOIN retiros r ON r.identificacion = h.identificacion
-WHERE h.corte_mes > r.fecha_retiro
-ORDER BY h.identificacion, h.corte_mes;
+---- Clientes con registros en historia DESPUÉS de su fecha de retiro
+--SELECT h.identificacion, h.corte_mes, r.fecha_retiro
+--FROM historia h
+--INNER JOIN retiros r ON r.identificacion = h.identificacion
+--WHERE h.corte_mes > r.fecha_retiro
+--ORDER BY h.identificacion, h.corte_mes;
 
 
 -- Solución con CTEs paso a paso para claridad y mantenibilidad.
-WITH
-
 -- Parámetros
-params AS (
+WITH params AS (
     SELECT
         '2027-02-28' AS fecha_base,
         3 AS n

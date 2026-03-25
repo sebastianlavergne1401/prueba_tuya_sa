@@ -4,7 +4,7 @@ import os
 
 def prepare_database():
     # 1. Configurar conexión
-    conn = sqlite3.connect('ejercicio_3/punto_3_solucion.db')
+    conn = sqlite3.connect('ejercicio_3/solution_database.db')
     cursor = conn.cursor()
 
     # 2. Leer el Schema

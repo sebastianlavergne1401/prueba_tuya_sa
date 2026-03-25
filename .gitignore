@@ -206,5 +206,8 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# Ignorar la base de datos del ejercicio 3
+ejercicio_3/solution_database.db
+
 # Ignorar la carpeta de datos del ejercicio 4
 ejercicio_4/data_html/
