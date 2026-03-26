@@ -16,8 +16,9 @@ def prepare_database():
     df_historia = pd.read_excel(path_excel, sheet_name='historia')
     df_retiros = pd.read_excel(path_excel, sheet_name='retiros')
 
-    # Eliminar duplicados exactos y asegurar formatos de fecha
+    # Eliminar duplicados exactos, saldos negativos y asegurar formatos de fecha
     df_historia = df_historia.drop_duplicates()
+    df_historia = df_historia[df_historia['saldo'] >= 0]
     df_historia['corte_mes'] = pd.to_datetime(df_historia['corte_mes']).dt.strftime('%Y-%m-%d')
     df_retiros['fecha_retiro'] = pd.to_datetime(df_retiros['fecha_retiro']).dt.strftime('%Y-%m-%d')
 

@@ -24,7 +24,7 @@ prueba_tuya_sa/
 │   └── schema.sql              # Esquema de la tabla a cargar en load_data.py
 │
 ├── ejercicio_4/           # Procesador de imágenes POO
-│   ├── file_orchestrator.py    # Buscador de archivos HTML dentro de la carpeta definida en main.py y consolidador de reportes al final
+│   ├── file_scanner.py         # Buscador de archivos HTML dentro de la carpeta definida en main.py y consolidador de reportes al final
 │   ├── html_processor.py       # Parser de los archivos HTML recibidos, busca tag <img> y clasifica "success" o "fail"
 │   ├── image_encoder.py        # Conversor de imágenes de formato binario a base64
 │   └── main.py                 # "Pipeline" principal para instanciar las clases .py
