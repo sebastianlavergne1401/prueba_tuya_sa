@@ -54,7 +54,6 @@ def process_dataset():
 
     print(f"Procesamiento finalizado exitosamente.")
     print(f"Resultados guardados en: {output_file}")
-    print("Hello world")
 
 if __name__ == "__main__":
     process_dataset()
